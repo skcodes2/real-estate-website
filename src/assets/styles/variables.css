@@ -1,0 +1,22 @@
+:root{
+    --primary-color: #E5CA6D;
+    --secondary-color: #BE9300;
+    --theme-color: #000000;
+    --text-color: #ffffff;
+    --primary-font: 'Italiana', sans-serif;
+    --secondary-font: 'Nanum Gothic', sans-serif;
+    --body-font-size: 16px;
+    --body-font-weight: 700;
+    --body-padding: 60px;
+    --h1-font-size: 72px;
+    --h2-font-size: 54px;
+    --h3-font-size: 32px;
+
+}
+
+
+@media (max-width: 920px) {
+    :root{
+        --body-font-size: 16px;
+    }
+}
