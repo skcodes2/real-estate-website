@@ -10,8 +10,8 @@ type NavLinkProps = {
 export default function NavLink({ name, open, toggleMenu }: NavLinkProps ) {
     const navigate = useNavigate();
   return (
-    <div className='nav-link-container body-text' >
-      <p className="body-text nav-link " onClick={() => {
+    <div className={`nav-link-container ${open ? "nav-link-mobile" : "body-text"}`} >
+      <p className={`${open ? "nav-link-mobile" : "body-text"} nav-link `} onClick={() => {
         if (open && toggleMenu) {
             toggleMenu()
         }

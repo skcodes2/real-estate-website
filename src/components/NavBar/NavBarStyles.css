@@ -122,9 +122,7 @@
 @media (max-width: 750px) {
 
 
-    body {
-       overflow: hidden;
-    }   
+    
    .links{
        flex-direction: column;
        position: fixed;

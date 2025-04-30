@@ -19,9 +19,6 @@ export default function NavBar() {
     const { darkMode, toggleDarkMode } = useDarkMode(true);
     const { scrolled, scrollUp } = useScrolled(200, darkMode);
 
-
-
-
     return (
         <div className={`container bg-color ${scrolled ? 'scrolled' : 'at-top'} ${scrollUp ? 'show-nav' : 'hide-nav'}`}>
 

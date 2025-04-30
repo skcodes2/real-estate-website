@@ -10,7 +10,7 @@
     --body-padding: 60px;
     --h1-font-size: 72px;
     --h2-font-size: 54px;
-    --h3-font-size: 32px;
+    --h3-font-size: 42px;
 
 }
 
@@ -18,5 +18,14 @@
 @media (max-width: 920px) {
     :root{
         --body-font-size: 16px;
+        --h3-font-size: 36px;
+        --body-padding: 30px;
+    }
+}
+@media (max-width: 540px) {
+    :root{
+        --body-font-size: 12px;
+        --h3-font-size: 28px;
+        --body-padding: 5px;
     }
 }
