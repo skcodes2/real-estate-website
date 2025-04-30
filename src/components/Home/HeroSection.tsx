@@ -1,4 +1,5 @@
 import HeroBg from '../../assets/HeroBg.png';
+import "./HeroSection.css"
 
 export default function HeroSection() {
   return (

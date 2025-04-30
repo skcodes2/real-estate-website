@@ -3,9 +3,26 @@
     display: flex;
     width: 100%;
     min-height: 3rem;
-    
+    transition: transform 0.4s ease, background-color 0.4s ease, backdrop-filter 0.4s ease;
     position: fixed;
 }
+.container.at-top {
+    background-color: transparent;
+  }
+  
+  .container.scrolled {
+    background-color: var(--theme-color);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+
+  .container.hide-nav {
+    transform: translateY(-100%);
+  }
+  
+  .container.show-nav {
+    transform: translateY(0);
+  }
 
 .burger-menu{
     display: none;
@@ -103,6 +120,7 @@
  
 }
 @media (max-width: 750px) {
+
 
     body {
        overflow: hidden;

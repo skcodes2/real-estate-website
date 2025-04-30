@@ -1,0 +1,9 @@
+
+.hero-section-container{
+
+}
+@media (max-width: 750px) {
+    .hero-section-container{
+        background-size: cover;
+    }
+}

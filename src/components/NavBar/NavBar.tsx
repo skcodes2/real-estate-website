@@ -10,15 +10,20 @@ import { useNavigate } from "react-router-dom";
 import BurgerMenu from "./BurgerMenu";
 import useMenuToggle from "../../hooks/ToggleBurgerMenu";
 import useDarkMode from "../../hooks/ToggleDarkMode";
+import useScrolled from "../../hooks/useScrolled";
 
 export default function NavBar() {
 
     const navigate = useNavigate();
     const { isOpen, isMounted, toggleMenu } = useMenuToggle(false);
     const { darkMode, toggleDarkMode } = useDarkMode(true);
+    const { scrolled, scrollUp } = useScrolled(200, darkMode);
+
+
+
 
     return (
-        <div className="container bg-color">
+        <div className={`container bg-color ${scrolled ? 'scrolled' : 'at-top'} ${scrollUp ? 'show-nav' : 'hide-nav'}`}>
 
             <div className="logo-container" onClick={() => navigate("/")}>
                 <div className="logo-box"><img src={logo} onClick={() => navigate("/")} alt="Logo" className="logo" /></div>
@@ -58,7 +63,15 @@ export default function NavBar() {
             <div className="divider"></div>
 
             <div className="extras">
-                <div className="moon" onClick={toggleDarkMode}>
+                <div className="moon" onClick={() => {
+                    toggleDarkMode();
+                    if (window.scrollY == 0) {
+                        let navBar = document.getElementsByClassName("container")[0];
+                        console.log(navBar.classList);
+                        navBar.classList.remove("at-top")
+                    }
+
+                }}>
                     {darkMode ?
                         <BedtimeOutlinedIcon
                             fontSize="inherit"
