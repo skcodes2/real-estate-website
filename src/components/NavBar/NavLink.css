@@ -1,0 +1,33 @@
+.nav-link-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+.nav-link {
+    position: relative;
+    border-radius: 0.5rem;
+    text-decoration: none; 
+    
+  }
+  
+  .nav-link::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--primary-color);
+    transition: width 0.3s ease;
+  }
+
+  .nav-link:hover::after {
+    width: 100%;
+  }
+  
+  .nav-link:hover {
+    cursor: pointer;
+  }
+  

@@ -1,0 +1,151 @@
+
+.container{
+    display: flex;
+    width: 100%;
+    min-height: 3rem;
+    
+    position: fixed;
+}
+
+.burger-menu{
+    display: none;
+    
+}
+
+.logo-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 20rem;
+    height: 3rem
+}
+
+
+.logo-container:hover p, img{
+    cursor: pointer;
+    color: var(--primary-color);
+}
+
+
+.logo {
+    display: block;
+    width: 3.6rem;
+    z-index: 10;
+    object-fit: cover;
+    
+}
+
+.links{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 6rem;
+}
+
+.divider{
+    width: 0.1rem;
+    height: 2rem;
+    background-color: var(--primary-color);
+    position: absolute;
+    top: 20%;
+    left: 85%;
+}
+
+.extras{
+    display:flex;
+    align-items: center;
+    font-size: 2rem;
+    
+    gap:1rem;
+
+}
+
+.language{
+    display: flex;
+    align-items: center;
+   
+}
+
+.flag {
+    display: block;
+    height: 1.5rem;
+    width: auto;
+    object-fit: contain;
+  }
+
+  
+
+
+@media (max-width: 1000px) {
+    .links{
+        gap: 2rem;
+    }  
+}
+
+@media (max-width: 1200px) {
+    .extras{
+        display:none;
+    }
+
+    .divider{
+        display:none;
+    }
+
+    .logo-container{
+        justify-content: start
+    }
+
+    .links{
+        justify-content: space-around;
+        gap: 4rem;
+    }
+ 
+}
+@media (max-width: 750px) {
+
+    body {
+       overflow: hidden;
+    }   
+   .links{
+       flex-direction: column;
+       position: fixed;
+       justify-content: center;
+       align-items: end;
+       padding: 1rem;
+       height: 100dvh;
+       border: 3px solid var(--primary-color);
+       transition: none;
+       transform: translateX(100%);
+       background-color: var(--theme-color);
+       font-family: var(--primary-font);
+   }
+
+   .close {
+    font-size: 2.5rem;
+   }
+
+  .links.animate {
+    transition: transform 0.5s ease;
+  }
+
+  .links.open {
+    transform: translateX(0%);
+  }
+
+   .open{
+       transform: translateX(0%);
+   }
+
+   .logo-container{
+       width: 43rem;
+   }
+
+   .burger-menu{
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       padding: 1rem;
+
+   }
+}
