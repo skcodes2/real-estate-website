@@ -1,0 +1,34 @@
+.success-formula-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 75dvh;
+}
+
+.success-formula-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap:1rem;
+    width: 65%;
+    margin: 5rem 0rem 0rem 0rem;
+}
+
+.success-formula-title{
+    text-align: center;
+}
+
+.success-formula-divider{
+    width: 80%;
+    height: 0.2rem;
+    background-color: var(--primary-color);
+    
+}
+
+.success-formula-description{
+    text-align: center;
+    line-height: 2.3rem;
+    
+}
