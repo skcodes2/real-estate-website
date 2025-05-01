@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-export default function useScrolled(threshold = 10, darkMode) {
+export default function useScrolled(threshold = 10, darkMode: any) {
   const [scrolled, setScrolled] = useState(false);
   const [scrollUp, setScrollUp] = useState(true);
 

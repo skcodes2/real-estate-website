@@ -14,9 +14,9 @@ export default function HeroSection() {
 
           <div className="hero-section-content body-padding">
               <div className="content">
-                  <div className="hero-title title-sm">Your Trusted Realtor for London Homes</div>
+                  <div className="hero-title title-sm" style={{ color: 'white' }}>Your Trusted Realtor for London Homes</div>
                   <div className="hero-divider"></div>
-                  <p className="hero-description body-text">With expertise in both real estate and insurance, I provide a streamlined experience that puts you at ease — so you don’t need multiple agents, just one trusted advisor who understands your goals.</p>
+                  <p className="hero-description body-text" style={{ color: 'white' }}>With expertise in both real estate and insurance, I provide a streamlined experience that puts you at ease — so you don’t need multiple agents, just one trusted advisor who understands your goals.</p>
                   <button className="hero-button button" onClick={() => navigate("/contact")}>Let's Talk</button>
                   <div className="social-icons">
                       <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>

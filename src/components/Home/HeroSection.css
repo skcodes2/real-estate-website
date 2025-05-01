@@ -1,6 +1,6 @@
 .hero-section-container {
     display: flex;
-    
+    min-height: fit-content;
 }
 
 .hero-section-content{
@@ -13,6 +13,7 @@
 
 .content{
     display: flex;
+    flex-grow: 1;
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;

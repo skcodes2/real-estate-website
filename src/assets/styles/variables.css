@@ -8,8 +8,8 @@
     --body-font-size: 19px;
     --body-font-weight: 700;
     --body-padding: 60px;
-    --h1-font-size: 72px;
-    --h2-font-size: 54px;
+    --h1-font-size: 90px;
+    --h2-font-size: 65px;
     --h3-font-size: 42px;
 
 }
@@ -19,6 +19,7 @@
     :root{
         --body-font-size: 16px;
         --h3-font-size: 36px;
+        --h2-font-size: 50px;
         --body-padding: 30px;
     }
 }
@@ -26,6 +27,7 @@
     :root{
         --body-font-size: 12px;
         --h3-font-size: 28px;
+        --h2-font-size: 40px;
         --body-padding: 5px;
     }
 }
