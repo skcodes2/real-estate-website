@@ -32,3 +32,12 @@
     background-color: var(--primary-color);
    
 }
+
+@media (max-width: 750px) {
+    .work-with-me-content{
+        width: 90%;
+    }
+    .work-with-me-divider{
+        width: 100%;
+    }
+}

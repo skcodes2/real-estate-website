@@ -4,6 +4,7 @@ import SuccessFormula from "../components/Home/SuccessFormula"
 import LearnMore from "../components/Home/LearnMore"
 import PropertiesView from "../components/Home/PropertiesView"
 import WorkwWithMe from "../components/WorkWithMe"
+import Footer from "../components/Footer"
 export default function Home() {
   return (
     <>
@@ -12,6 +13,7 @@ export default function Home() {
       <LearnMore />
       <PropertiesView />
       <WorkwWithMe />
+      <Footer />
     </>
   )
 }
