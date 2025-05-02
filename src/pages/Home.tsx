@@ -3,6 +3,7 @@ import HeroSection from "../components/Home/HeroSection"
 import SuccessFormula from "../components/Home/SuccessFormula"
 import LearnMore from "../components/Home/LearnMore"
 import PropertiesView from "../components/Home/PropertiesView"
+import WorkwWithMe from "../components/WorkWithMe"
 export default function Home() {
   return (
     <>
@@ -10,6 +11,7 @@ export default function Home() {
       <SuccessFormula />
       <LearnMore />
       <PropertiesView />
+      <WorkwWithMe />
     </>
   )
 }
