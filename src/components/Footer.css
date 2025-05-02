@@ -112,6 +112,10 @@
     
 }
 
+.footer-copyright{
+    text-align: center;
+}
+
 @media (max-width:1150px){
     .divider1, .footer-content-box, .footer-content-column{
         display: none;
