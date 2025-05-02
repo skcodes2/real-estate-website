@@ -2,12 +2,17 @@
 import "./PropertiesView.css";
 import { useNavigate } from "react-router-dom";
 import PropertiesViewSlider from "./PropertiesViewSlider";
+import { useEffect } from "react";
+
 
 export default function PropertiesView() {
 const navigate = useNavigate();
-    const swiperElement = document.querySelector('.swiper') as HTMLElement & { swiper?: any };
-    const swiper = swiperElement?.swiper || null;
+    let swiper: any;
 
+    useEffect(() => {
+        const swiperElement = document.querySelector('.mySwiper') as HTMLElement;
+        swiper = swiperElement?.swiper;
+    }, [])
   return (
       <section className="properties-view-container bg-color body-padding">
 

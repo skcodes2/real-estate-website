@@ -15,7 +15,7 @@ export default function WorkWithMe() {
         </div>
       </div>
       <div className="work-with-me-button-container">
-        <button className="work-with-me-button button2" onClick={() => navigate("/contact")}>
+        <button className="work-with-me-button button2" style={{ color: 'white' }} onClick={() => navigate("/contact")}>
           Contact Me
         </button>
       </div>
