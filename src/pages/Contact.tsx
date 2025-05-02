@@ -1,6 +1,8 @@
-
+import ContactStart from "../components/Contact/ContactStart"
 export default function Contact() {
   return (
-    <div>Contact</div>
+    <>
+      <ContactStart />
+    </>
   )
 }
