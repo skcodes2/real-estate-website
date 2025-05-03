@@ -7,6 +7,7 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ContactFlex from "./ContactFlex";
 import { useNavigate } from "react-router-dom";
 import NavLink from "./NavBar/NavLink";
+import FooterEnd from "./FooterEnd";
 
 export default function Footer() {
     const navigate = useNavigate();
@@ -37,24 +38,15 @@ export default function Footer() {
                 </div>
 
             </div>
+        <div className="footer-contact-details">
            <ContactFlex 
            vGap={7}
            hGap={22}
            />
         </div>
-        <div className="footer-divider"></div>
-        <div className="footer-end">
-            <div className="footer-nav">
-                <NavLink name="Home" open={false} toggleMenu={() => {}} />
-                <NavLink name="About" open={false} toggleMenu={() => {}} />
-                <NavLink name="Guide" open={false} toggleMenu={() => {}} />
-                <NavLink name="Properties" open={false} toggleMenu={() => {}} />
-                <NavLink name="Contact" open={false} toggleMenu={() => {}} />
-                
-            </div>
-            <p className="book-call body-text" onClick={()=>navigate("/contact")}>Book a Call</p>
-            <p className="footer-copyright body-text"> © 2025 Kuldip Kahlon. All rights reserved.  Licensed Realtor & Insurance Advisor in Ontario.</p>
-        </div>
+      </div>
+
+      <FooterEnd />
     </section>
   )
 }

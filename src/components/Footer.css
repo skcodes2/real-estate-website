@@ -9,7 +9,7 @@
 }
 
 .footer-divider{
-    width: 70%;
+    width: 90%;
     height: 0.1rem;
     background-color: var(--primary-color);
 }
@@ -104,6 +104,7 @@
     justify-content: center;
     align-items: center;
     gap: 1rem;
+    margin-top: 1rem;
 }
 
 .book-call:hover{
@@ -116,8 +117,22 @@
     text-align: center;
 }
 
+.footer-end-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
 @media (max-width:1150px){
-    .divider1, .footer-content-box, .footer-content-column{
+    .divider1, .footer-contact-details, .footer-content-column{
         display: none;
     }
 }
+
+@media(max-width:450px){
+    .footer-content-box{
+        display: none;
+    }
+}
+

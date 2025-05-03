@@ -1,5 +1,13 @@
 import { useState, ChangeEvent, JSX } from "react";
 import "./Contact.css";
+import ContactFlex from "../ContactFlex";
+import MapComponent from "../Map";
+import FooterEnd from "../FooterEnd";
+import InstagramIcon from '@mui/icons-material/Instagram';
+import FacebookIcon from '@mui/icons-material/Facebook';
+import WhatsAppIcon from '@mui/icons-material/WhatsApp';
+import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 type FormData = {
   firstname: string;
@@ -30,8 +38,6 @@ export default function Contact(): JSX.Element {
     message: ''
   });
 
-  console.log(formData);
-
   const handleSanitizeChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     key: keyof FormData,
@@ -54,6 +60,7 @@ export default function Contact(): JSX.Element {
   };
 
   return (
+    <div className="bg-color">
     <section className="contact-container bg-color">
       <div className="messaging-container">
         <div className="messaging-header">
@@ -150,8 +157,25 @@ export default function Contact(): JSX.Element {
           </div>
         </div>
       </div>
+      <div className="contact-divider"></div>
+      <div className="contact-details-container">
+        <p className="contact-details-title title-md">Contact Details</p>
+        <div className="messaging-divider"></div>
+        <ContactFlex vGap={5} hGap={9} />
+        <div className="map">
+          <MapComponent />
+        </div>
+        <div className="social-icons" style={{ justifyContent: 'center' }}>
+          <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+          <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><FacebookIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+          <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><WhatsAppIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+          <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><LinkedInIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+        </div>
 
-      <div className="contact-details-container"></div>
+        </div>
+
     </section>
+      <FooterEnd />
+    </div> 
   );
 }
