@@ -55,7 +55,7 @@
 
 .button{
     background-color: var(--secondary-color);
-    color: rgb(255, 255, 255);
+    color: var(--text-color);
     padding: 5px 20px;
     font-family: var(--secondary-font);
     font-size: var(--body-font-size);

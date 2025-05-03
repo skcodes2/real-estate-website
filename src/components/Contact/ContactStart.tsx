@@ -7,7 +7,7 @@ export default function ContactStart() {
         <div className="contact-image">
             <img src={Pic} alt="" className="contact-image-pic" />
         </div>
-        <p className="contact-start-description title-lg">GET IN TOUCH</p>
+          <p className="contact-start-description title-lg" style={{ color: 'white' }}>GET IN TOUCH</p>
     </section>
   )
 }
