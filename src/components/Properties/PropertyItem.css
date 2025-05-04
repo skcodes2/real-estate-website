@@ -1,0 +1,65 @@
+.property-item-container {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  height: auto;
+  border-radius: 0.5rem;
+  overflow: hidden;
+
+}
+
+.property-image-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+
+.property-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: filter 0.3s ease;
+}
+
+
+.property-image-wrapper:hover .property-image {
+    filter: brightness(60%);
+  }
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  pointer-events: none; 
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.property-image-wrapper:hover .overlay {
+  opacity: 1;
+  pointer-events: auto; 
+}
+
+.view-button {
+  padding: 0.7rem 1.5rem;
+  background-color: var(--secondary-color);
+  color: white;
+  border: none;
+  border-radius: 0.3rem;
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  z-index: 2;
+}
+
+.view-button:hover {
+  background-color: var(--primary-color);
+}

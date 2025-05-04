@@ -14,6 +14,7 @@ import Temp from "../../assets/TempImage.png"
 
 // import required modules
 import { Keyboard } from 'swiper/modules';
+import PropertyItem from '../Properties/PropertyItem';
 
 export default function PropertiesViewSlider() {
   return (
@@ -37,7 +38,7 @@ export default function PropertiesViewSlider() {
         className="mySwiper"
       >
         <SwiperSlide>
-          <img src={Temp} />
+          <PropertyItem imageUrl={Temp} propertyId="1" />
         </SwiperSlide>
         <SwiperSlide>
           <img src={Temp} />
