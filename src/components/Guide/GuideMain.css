@@ -1,0 +1,33 @@
+.guide-content-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: fit-content;
+}
+
+.seller, .buyer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    max-width: fit-content;
+}
+
+.buyer-image, .seller-image{
+   display: block;
+    max-width: 90%;
+}
+
+.seller-text, .buyer-text{
+   text-align: left;
+    width: 70%;
+    line-height: 2rem;
+}
+
+.guide-content-title{
+    width: fit-content;
+}
+
+.seller-image-container, .buyer-image-container{
+    width: fit-content;
+}

@@ -41,7 +41,7 @@ export default function Footer() {
         <div className="footer-contact-details">
            <ContactFlex 
            vGap={7}
-           hGap={22}
+            hGap={20}
            />
         </div>
       </div>
