@@ -6,6 +6,7 @@ import Guide from './pages/Guide'
 import "./assets/styles/variables.css"
 import "./assets/styles/global.css"
 import NavBar from './components/NavBar/NavBar'
+import Properties from './pages/Properties'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
         <Route path="/guide" element={<Guide />} />
+        <Route path="/properties" element={<Properties />} />
     </Routes>
     </>
   )

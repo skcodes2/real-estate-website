@@ -5,12 +5,10 @@ import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ContactFlex from "./ContactFlex";
-import { useNavigate } from "react-router-dom";
-import NavLink from "./NavBar/NavLink";
 import FooterEnd from "./FooterEnd";
 
 export default function Footer() {
-    const navigate = useNavigate();
+
   return (
     <section className="footer-container bg-color">
         <div className="footer-divider divider1"></div>
