@@ -5,3 +5,17 @@
   font-size: 1.2rem;
   color: #555;
 }
+
+.properties-main-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 2rem;
+  padding: 2rem;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  .properties-main-container {
+    padding: 0rem;
+  }
+}

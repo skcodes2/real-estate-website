@@ -17,10 +17,14 @@ export default function SingleProperty({ property }: Props) {
 
   return (
     <div className="single-property-container ">
-      <img src={displayImageUrl} alt="Main" />
+
+      <div className="single-property-image-container">
+        <img src={displayImageUrl} className="single-property-image" alt="Main" />
+      </div>
+      <div className="single-property-text-container"></div>
       <p className="property-text body-text">{address}</p>
-      <p className="body-text">{bedrooms} BD | {bathrooms}BA | {sqft} SQ.FT</p>   
-      <p className="body-text">From ${price}</p>
+      <p className="property-text body-text">{bedrooms} BD | {bathrooms}BA | {sqft} SQ.FT</p>
+      <p className="property-text body-text">From ${price}</p>
       
     </div>
   );
