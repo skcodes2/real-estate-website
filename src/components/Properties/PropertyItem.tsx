@@ -1,19 +1,13 @@
 import { FC } from "react";
 import { useNavigate } from "react-router-dom";
 import "./PropertyItem.css";
+import { PropertyItemProps } from "./PropertyTypes";
 
-type PropertyItemProps = {
-  imageUrl: string;
-  propertyId?: string;
-};
-
-const PropertyItem: FC<PropertyItemProps> = ({ imageUrl, propertyId }) => {
+const PropertyItem: FC<PropertyItemProps> = ({ imageUrl, address }) => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    if (propertyId) {
-      navigate(`/properties/${propertyId}`);
-    }
+    navigate(`/properties/${encodeURIComponent(address)}`);
   };
 
   return (
