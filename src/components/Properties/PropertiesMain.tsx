@@ -4,27 +4,34 @@ import { API_URL } from "../../constants";
 import { useEffect, useState } from "react";
 import { PropertyDetails } from "./PropertyTypes";
 
-export default function PropertiesMain() {
-  const [properties, setProperties] = useState<PropertyDetails[]>([]);
-  const [loading, setLoading] = useState(true);
+export function getProperties() {
+    return fetch(`${API_URL}/api/properties`)
+        .then((response) => {
+            if (!response.ok) {
+                throw new Error("Network response was not ok");
+            }
+            return response.json();
+        })
+        .catch((error) => {
+            console.error("Error fetching properties:", error);
+            throw error;
+        });
+}
 
-  useEffect(() => {
-    fetch(API_URL + "/api/properties")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Could not fetch properties.");
-        }
-        return response.json();
-      })
-      .then((data) => {
-        console.log("Fetched properties:", data);
-        setProperties(data);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error("Error fetching properties:", error);
-        setLoading(false);
-      });
+export default function PropertiesMain() {
+    const [properties, setProperties] = useState<PropertyDetails[]>([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        getProperties()
+            .then((data) => {
+                setProperties(data);
+                setLoading(false);
+            })
+            .catch((error) => {
+                console.error("Error fetching properties:", error);
+                setLoading(false);
+            }); 
   }, []);
 
   return (

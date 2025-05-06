@@ -1,5 +1,6 @@
 import "./SingleProperty.css";
 import { PropertyDetails } from "./PropertyTypes";
+import { useNavigate } from "react-router-dom";
 
 type Props = {
   property: PropertyDetails;
@@ -15,17 +16,28 @@ export default function SingleProperty({ property }: Props) {
     displayImageUrl
   } = property;
 
-  return (
-    <div className="single-property-container ">
+  const navigate = useNavigate();
 
-      <div className="single-property-image-container">
+  const handleClick = () => {
+    navigate(`/properties/${encodeURIComponent(address)}`);
+  };
+
+  return (
+    <div className="single-property-container">
+      <div className="single-property-image-wrapper">
         <img src={displayImageUrl} className="single-property-image" alt="Main" />
+        <div className="single-property-overlay">
+          <button className="view-button" onClick={handleClick}>
+            View Property
+          </button>
+        </div>
       </div>
-      <div className="single-property-text-container"></div>
+
       <p className="property-text body-text">{address}</p>
-      <p className="property-text body-text">{bedrooms} BD | {bathrooms}BA | {sqft} SQ.FT</p>
+      <p className="property-text body-text">
+        {bedrooms} BD | {bathrooms}BA | {sqft} SQ.FT
+      </p>
       <p className="property-text body-text">From ${price}</p>
-      
     </div>
   );
 }
