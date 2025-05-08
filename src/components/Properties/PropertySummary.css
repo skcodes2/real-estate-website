@@ -78,3 +78,19 @@
 .swiper-button-prev, .swiper-button-next{
     color: var(--secondary-color);
 }
+
+@media (max-width: 768px){
+    .property-summary-icons-container{
+        display: none;
+    }
+    .summary-icon-divider{
+        display: none;
+    }
+    .property-summary-content{
+        max-width: 100%;
+    }
+    .sold{
+        width: 50%;
+    }
+    
+}
