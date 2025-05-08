@@ -5,10 +5,20 @@ export type PropertyItemProps = {
 export type PropertyDetails = {
   address: string;
   sqft: string;
-  price: string;
+  price: number;
   bedrooms: number;
   bathrooms: number;
-  imageUrls: string[];
+  images: string[];
   displayImageUrl: string;
-  additionalDetails: string;
+  description: string;
+  sold: "Sold" | "For Sale" | "On Lease";
+  prpertyType: string;
+  stories: number;
+  yearBuilt: number;
+  pool: boolean;
+  appliances: string;
+  parking: string;
+  heating: string;
+  cooling: string;
+  laundry: string;
 };
