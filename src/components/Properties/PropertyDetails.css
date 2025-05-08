@@ -1,0 +1,19 @@
+
+
+
+.property-details-slider-container{
+    width: 100%;
+    height: fit-content;
+}
+
+.mySwiper2 img{
+    display: block;
+    max-width: 80%;
+    min-height: 90dvh;
+    object-fit: cover;
+}
+
+.mySwiper2 .swiper-slide{
+   height: 100%;
+}
+
