@@ -1,0 +1,55 @@
+.mini-contact-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+    padding: 2rem;
+    flex-wrap: wrap;
+  }
+  
+  .mini-contact-image-wrapper {
+    flex-shrink: 0;
+  }
+  
+  .mini-contact-image {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 0.25rem;
+  }
+  
+  .mini-contact-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    flex: 1;
+  }
+  
+ 
+  .mini-divider {
+    width: 35%;
+    height: 3px;
+    background-color: var(--primary-color);
+    margin-top: -1rem;
+  }
+  
+  .mini-info {
+    display: flex;
+    gap: 3rem;
+    flex-wrap: wrap;
+  }
+  
+  .mini-info-section {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .mini-info-value {
+    margin-top: 0.25rem;
+  }
+  
+  .mini-button-wrapper {
+    margin-top: 1rem;
+  }
+
+  
