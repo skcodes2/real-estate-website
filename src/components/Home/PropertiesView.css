@@ -65,12 +65,12 @@
     padding: 2rem 0;
 }
 
-.swiper {
+.mySwiper .swiper {
     width: 80%;
     height: 70%;
   }
   
-  .swiper-slide {
+ .mySwiper .swiper-slide {
     text-align: center;
     font-size: 10px;
     background: var(--theme-color);
@@ -81,11 +81,8 @@
    
   }
   
-  .swiper-slide img {
-    
+  .mySwiper .swiper-slide img {
     max-width: 70%;
-    
-    
   }
   .properties-view-button-container{
     display: flex;
