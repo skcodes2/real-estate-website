@@ -163,7 +163,8 @@ export default function Contact(): JSX.Element {
         <div className="messaging-divider"></div>
         <ContactFlex vGap={5} hGap={9} />
         <div className="map">
-          <MapComponent />
+            <MapComponent latitude={42.9849} longitude={-81.2453} />
+
         </div>
         <div className="social-icons" style={{ justifyContent: 'center' }}>
           <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
