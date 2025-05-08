@@ -3,6 +3,7 @@ import PropertySummary from "../components/Properties/PropertySummary"
 import PropertyFeatures from "../components/Properties/PropertyFeatures"
 import { useParams } from "react-router-dom"
 import MiniContact from "../components/Contact/MiniContact"
+import Footer from "../components/Footer"
 export default function PropertyDetails() {
     const { address } = useParams<{ address: string }>()
   return (
@@ -11,6 +12,7 @@ export default function PropertyDetails() {
         {address && <PropertySummary/>}
           {address && <PropertyFeatures />}
           {address && <MiniContact />}
+      {address && <Footer />}
 
     </section>
   )

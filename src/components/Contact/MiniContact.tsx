@@ -1,6 +1,7 @@
 import "./MiniContact.css";
 import pic from "../../assets/KuldipPic4.png";
 import { useNavigate } from "react-router-dom";
+import { PERSONAL_INFO } from "../../constants";
 
 export default function MiniContact() {
     const navigate = useNavigate();
@@ -21,11 +22,11 @@ export default function MiniContact() {
           </div>
           <div className="mini-info-section">
             <p className="mini-info-label body-text">Email</p>
-            <p className="mini-info-value body-text">kuldipsandhu1@hotmail.com</p>
+            <p className="mini-info-value body-text">{PERSONAL_INFO.email}</p>
           </div>
           <div className="mini-info-section">
             <p className="mini-info-label body-text">Phone Number</p>
-            <p className="mini-info-value body-text">414 605 4058</p>
+            <p className="mini-info-value body-text">{PERSONAL_INFO.phone}</p>
           </div>
         </div>
 

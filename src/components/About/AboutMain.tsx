@@ -4,6 +4,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { PERSONAL_INFO } from "../../constants";
 import "./AboutMain.css";
 
 export default function AboutMain() {
@@ -41,9 +42,9 @@ export default function AboutMain() {
           <div className="about-divider"></div>
         </div>
         <p className="about-phone title-sm">Phone Number:</p>
-        <p className="about-phone-number body-text">(416)-605-4058</p>
+        <p className="about-phone-number body-text">{PERSONAL_INFO.phone}</p>
         <p className="about-email title-sm">Email:</p>
-        <p className="about-email-text body-text">kuldipsandhu1@outlook.com</p>
+        <p className="about-email-text body-text">{PERSONAL_INFO.email}</p>
         <p className="about-address title-sm">Address:</p>
         <p className="about-address-text body-text">London, Ontario</p>
 

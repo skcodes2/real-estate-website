@@ -3,6 +3,7 @@ import MailOutlineIcon from '@mui/icons-material/MailOutline';
 import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import QueryBuilderOutlinedIcon from '@mui/icons-material/QueryBuilderOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
+import { PERSONAL_INFO } from '../constants'; // Adjust the path as necessary
 
 type ContactFlexProps = {
     vGap?: number;
@@ -42,7 +43,7 @@ export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
                     </a>
                     <div className="footer-content-info-container">
                         <p className="footer-content-info-title title-sm">Email</p>
-                        <p className="footer-content-info body-text">kuldipsandhu1@gmail.com</p>
+                        <p className="footer-content-info body-text">{PERSONAL_INFO.email}</p>
                     </div>
         </div>
 
@@ -59,7 +60,7 @@ export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
                     </a>
                     <div className="footer-content-info-container">
                         <p className="footer-content-info-title title-sm">Phone Number</p>
-                        <p className="footer-content-info body-text">(416)-605-4058</p>
+                        <p className="footer-content-info body-text">{PERSONAL_INFO.phone}</p>
                     </div>
         </div>
             </div>
