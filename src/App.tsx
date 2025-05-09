@@ -8,12 +8,14 @@ import "./assets/styles/global.css"
 import NavBar from './components/NavBar/NavBar'
 import Properties from './pages/Properties'
 import PropertyDetails from './pages/PropertyDetails'
+import ScrollToTop from './ScrollToTop'
 
 
 export default function App() {
   return (
     <> 
     <NavBar />
+      <ScrollToTop />
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
