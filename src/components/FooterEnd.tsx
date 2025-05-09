@@ -1,22 +1,26 @@
 
 import { useNavigate } from 'react-router-dom'
 import NavLink from './NavBar/NavLink'
+import { useLanguage } from '../hooks/useLanguage'
+import { footerTranslations } from '../constants'
 export default function FooterEnd() {
     const navigate = useNavigate()
+  const { language } = useLanguage()
+  const translations = footerTranslations[language]
   return (
     <div className="footer-end-container">
        <div className="footer-divider"></div>
             <div className="footer-end">
                 <div className="footer-nav">
-                    <NavLink name="Home" open={false} toggleMenu={() => {}} />
-                    <NavLink name="About" open={false} toggleMenu={() => {}} />
-                    <NavLink name="Guide" open={false} toggleMenu={() => {}} />
-                    <NavLink name="Properties" open={false} toggleMenu={() => {}} />
-                    <NavLink name="Contact" open={false} toggleMenu={() => {}} />
+          <NavLink name={translations.footerHome} open={false} toggleMenu={() => { }} />
+          <NavLink name={translations.footerAbout} open={false} toggleMenu={() => { }} />
+          <NavLink name={translations.footerGuide} open={false} toggleMenu={() => { }} />
+          <NavLink name={translations.footerProperties} open={false} toggleMenu={() => { }} />
+          <NavLink name={translations.footerContact} open={false} toggleMenu={() => { }} />
                     
                 </div>
-                <p className="book-call body-text" onClick={()=>navigate("/contact")}>Book a Call</p>
-                <p className="footer-copyright body-text"> © 2025 Kuldip Kahlon. All rights reserved.  Licensed Realtor & Insurance Advisor in Ontario.</p>
+        <p className="book-call body-text" onClick={() => navigate("/contact")}>{translations.footerBooking}</p>
+        <p className="footer-copyright body-text"> {translations.footerCopyright}</p>
             </div>
     </div>
   )

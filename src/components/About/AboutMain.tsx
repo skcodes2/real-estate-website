@@ -6,10 +6,13 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { PERSONAL_INFO } from "../../constants";
 import "./AboutMain.css";
+import { useLanguage } from '../../hooks/useLanguage';
+import { aboutTranslations } from '../../constants';
 
 export default function AboutMain() {
   const [expanded, setExpanded] = useState(false);
-
+  const { language } = useLanguage();
+  const translations = aboutTranslations[language];
   const toggleReadMore = () => {
     setExpanded((prev) => !prev);
   };
@@ -38,22 +41,22 @@ export default function AboutMain() {
 
       <div className="about-content-section">
         <div className="about-title-section">
-          <p className="about-title title-md">Kuldip Kahlon</p>
+          <p className="about-title title-md">{translations.aboutTitle}</p>
           <div className="about-divider"></div>
         </div>
-        <p className="about-phone title-sm">Phone Number:</p>
+        <p className="about-phone title-sm">{translations.aboutPhoneLabel}</p>
         <p className="about-phone-number body-text">{PERSONAL_INFO.phone}</p>
-        <p className="about-email title-sm">Email:</p>
+        <p className="about-email title-sm">{translations.aboutEmailLabel}</p>
         <p className="about-email-text body-text">{PERSONAL_INFO.email}</p>
-        <p className="about-address title-sm">Address:</p>
-        <p className="about-address-text body-text">London, Ontario</p>
+        <p className="about-address title-sm">{translations.aboutAddressLabel}</p>
+        <p className="about-address-text body-text">{translations.aboutAddressText}</p>
 
         <p className="about-description body-text">
-          Kuldip Kahlon is a licensed real estate professional with over 5 years of hands-on experience helping clients buy, sell, and invest with confidence. She is also a certified insurance advisor, offering guidance on how to protect what matters most through customized coverage solutions. Kuldip’s unique combination of real estate and insurance expertise allows her to provide well-rounded advice that supports both immediate goals and long-term security.
+          {translations.aboutDescription}
           {expanded && (
             <>
               {' '}
-              Known for her approachable nature, strong communication skills, and results-driven mindset, Kuldip is dedicated to simplifying complex decisions and delivering personalized service every step of the way. Whether you're entering the market for the first time or preparing for the next phase of life, she is committed to making the process seamless and rewardin
+              {translations.aboutDescriptionExpanded}
             </>
           )}
         </p>
@@ -62,7 +65,7 @@ export default function AboutMain() {
           className="about-read-more body-text read-toggle"
           onClick={toggleReadMore}
         >
-          {expanded ? 'Read Less' : 'Read More'}
+          {expanded ? translations.aboutReadLess : translations.aboutReadMore}
         </p>
       </div>
     </section>

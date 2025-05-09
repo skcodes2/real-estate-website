@@ -6,9 +6,12 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ContactFlex from "./ContactFlex";
 import FooterEnd from "./FooterEnd";
+import { useLanguage } from "../hooks/useLanguage";
+import { footerTranslations } from "../constants";
 
 export default function Footer() {
-
+  const { language } = useLanguage();
+  const translations = footerTranslations[language];
   return (
     <section className="footer-container bg-color">
         <div className="footer-divider divider1"></div>
@@ -20,13 +23,12 @@ export default function Footer() {
                 </div>
 
                 <p className="footer-content-column-description body-text">
-                Real Estate & Insurance                                    
-                Services You Can Rely On
+            {translations.footerSubtitle}
                 </p>
 
 
                 <div className="footer-social-icons-container">
-                      <p className="footer-social-icons-title title-sm">Social Media</p>  
+            <p className="footer-social-icons-title title-sm">{translations.footerSocial}</p>  
                       <div className="footer-social-icons">
                         <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
                         <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><FacebookIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>

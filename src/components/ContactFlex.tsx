@@ -4,6 +4,8 @@ import PhoneOutlinedIcon from '@mui/icons-material/PhoneOutlined';
 import QueryBuilderOutlinedIcon from '@mui/icons-material/QueryBuilderOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 import { PERSONAL_INFO } from '../constants'; // Adjust the path as necessary
+import { useLanguage } from '../hooks/useLanguage';
+import { footerTranslations } from '../constants';
 
 type ContactFlexProps = {
     vGap?: number;
@@ -12,6 +14,8 @@ type ContactFlexProps = {
 
 export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
     const [adjustedHGap, setAdjustedHGap] = useState(hGap);
+    const { language } = useLanguage();
+    const translations = footerTranslations[language];
 
     useEffect(() => {
         const updateGap = () => {
@@ -42,7 +46,7 @@ export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
                         />
                     </a>
                     <div className="footer-content-info-container">
-                        <p className="footer-content-info-title title-sm">Email</p>
+                        <p className="footer-content-info-title title-sm">{translations.footerEmail}</p>
                         <p className="footer-content-info body-text">{PERSONAL_INFO.email}</p>
                     </div>
         </div>
@@ -59,7 +63,7 @@ export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
                         />
                     </a>
                     <div className="footer-content-info-container">
-                        <p className="footer-content-info-title title-sm">Phone Number</p>
+                        <p className="footer-content-info-title title-sm">{translations.footerPhone}</p>
                         <p className="footer-content-info body-text">{PERSONAL_INFO.phone}</p>
                     </div>
         </div>
@@ -78,8 +82,8 @@ export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
                         />
                     </a>
                     <div className="footer-content-info-container">
-                        <p className="footer-content-info-title title-sm">Open Hours</p>
-                        <p className="footer-content-info body-text">Always Open</p>
+                        <p className="footer-content-info-title title-sm">{translations.OpenHours}</p>
+                        <p className="footer-content-info body-text">{translations.AlwaysOpen}</p>
                     </div>
         </div>
 
@@ -95,8 +99,8 @@ export default function ContactFlex({ vGap = 2, hGap = 4 }: ContactFlexProps) {
                         />
                     </a>
                     <div className="footer-content-info-container">
-                        <p className="footer-content-info-title title-sm">Location</p>
-                        <p className="footer-content-info body-text">London, Ontario</p>
+                        <p className="footer-content-info-title title-sm">{translations.footerLoco}</p>
+                        <p className="footer-content-info body-text">{translations.footerLocation}</p>
                     </div>
         </div>
             </div>

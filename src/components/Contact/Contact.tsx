@@ -10,6 +10,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import { API_URL } from "../../constants";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
+import { useLanguage } from "../../hooks/useLanguage";
+import { contactTranslations } from "../../constants";
 type FormData = {
   firstname: string;
   lastname: string;
@@ -31,6 +33,8 @@ function Sanitizer(
 
 export default function Contact(): JSX.Element {
   const [errorMessage, setErrorMessage] = useState('');
+  const { language } = useLanguage();
+  const translations = contactTranslations[language];
   const [formData, setFormData] = useState<FormData>({
     firstname: '',
     lastname: '',
@@ -110,31 +114,31 @@ export default function Contact(): JSX.Element {
     <section className="contact-container bg-color">
       <div className="messaging-container">
         <div className="messaging-header">
-          <p className="messaging-title title-md">Got a Question?</p>
+            <p className="messaging-title title-md">{translations.contactFormTitle}</p>
           <div className="messaging-divider"></div>
           <p className="messaging-subtitle body-text" style={{ fontSize: '24px' }}>
-            Contact Kuldip by filling out the form
+              {translations.contactFormSubtitle}
           </p>
         </div>
 
         <div className="messaging-form">
           <div className="names">
             <div className="first">
-              <label className="first-name body-text">First Name (Required)</label>
+                <label className="first-name body-text">{translations.contactFormFirstNameLabel}</label>
               <input
                 type="text"
                 className="first-name-input form-input"
-                placeholder="Enter your first name"
+                  placeholder={translations.contactPlaceholderFirstName}
                 value={formData.firstname}
                 onChange={(e) => handleSanitizeChange(e, 'firstname', /[^a-zA-Z\s'-]/g)}
               />
             </div>
             <div className="last">
-              <label className="last-name body-text">Last Name (Required)</label>
+                <label className="last-name body-text">{translations.contactFormLastNameLabel}</label>
               <input
                 type="text"
                 className="last-name-input form-input"
-                placeholder="Enter your last name"
+                  placeholder={translations.contactPlaceholderLastName}
                 value={formData.lastname}
                 onChange={(e) => handleSanitizeChange(e, 'lastname', /[^a-zA-Z\s'-]/g)}
               />
@@ -142,29 +146,29 @@ export default function Contact(): JSX.Element {
           </div>
 
           <div className="phone">
-            <label className="phone body-text">Phone Number (Required)</label>
+              <label className="phone body-text">{translations.contactFormPhoneLabel}</label>
             <input
               type="number"
               className="phone-input form-input"
-              placeholder="Enter your phone number"
+                placeholder={translations.contactPlaceholderPhone}
               value={formData.phone}
               onChange={(e) => handleSanitizeChange(e, 'phone', /[^0-9]/g)}
             />
           </div>
 
           <div className="email">
-            <label className="email body-text">Email (Required)</label>
+              <label className="email body-text">{translations.contactFormEmailLabel}</label>
             <input
               type="text"
               className="email-input form-input"
-              placeholder="Enter your email"
+                placeholder={translations.contactPlaceholderEmail}
               value={formData.email}
               onChange={(e) => handleSanitizeChange(e, 'email', /[^a-zA-Z0-9@._-]/g)}
             />
           </div>
 
           <div className="multiple-choice">
-            <p className="multiple-choice-title title-sm">I'm interested In</p>
+              <p className="multiple-choice-title title-sm">{translations.contactFormChoiceTitle}</p>
             <div className="radio-container">
               {["Buying", "Selling", "Other"].map((opt) => (
                 <div key={opt}>
@@ -186,13 +190,13 @@ export default function Contact(): JSX.Element {
           </div>
 
           <div className="long-description">
-            <label className="descrip body-text">How can I help? (optional)</label>
+              <label className="descrip body-text">{translations.contactPlaceholderDescription}</label>
             <textarea
               maxLength={1500}
               rows={4}
               cols={50}
               className="descrip-input form-input"
-              placeholder="Enter your message here (250 words maximum)..."
+                placeholder={translations.contactPlaceholderDescription}
               value={formData.message}
               onChange={(e) => handleSanitizeChange(e, 'message', /[^a-zA-Z0-9\s.,!?'"@#%&()\-]/g)}
             />
@@ -203,19 +207,18 @@ export default function Contact(): JSX.Element {
                 <p className="error-message body-text" style={{ color: 'red' }}>{errorMessage}</p>
               )}
               <button className="send-message body-text button" onClick={handleSubmit}>
-                Send Message
+                {translations.contactFormButton}
               </button>
             </div>
         </div>
       </div>
       <div className="contact-divider"></div>
       <div className="contact-details-container">
-        <p className="contact-details-title title-md">Contact Details</p>
+          <p className="contact-details-title title-md">{translations.contactDetailsTitle}</p>
         <div className="messaging-divider"></div>
         <ContactFlex vGap={5} hGap={9} />
         <div className="map">
             <MapComponent latitude={42.9849} longitude={-81.2453} />
-
         </div>
         <div className="social-icons" style={{ justifyContent: 'center' }}>
           <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} /></a>

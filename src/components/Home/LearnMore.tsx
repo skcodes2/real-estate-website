@@ -3,7 +3,11 @@ import "./LearnMore.css";
 import HomeAbout from "../../assets/HomeAbout.png"
 import HeroPic from "../../assets/FinalProfilePic.png"
 import logo from "../../assets/LogoNoText.png"
+import { useLanguage } from "../../hooks/useLanguage";
+import { homeTranslations } from "../../constants";
 export default function LearnMore() {
+  const { language } = useLanguage();
+  const translations = homeTranslations[language];
   return (
     <section className="learn-more-container bg-image" style={{ backgroundImage: `url(${HomeAbout})` }}>
         <div className="learn-more-image-container">
@@ -11,12 +15,11 @@ export default function LearnMore() {
         </div>
         <div className="learn-more-content body-padding">
             <img src={logo} alt="logo" className="learn-more-logo" />
-            <div className="learn-more-title title-md" style={{color:'white'}}>Kuldip Kahlon</div>
+        <div className="learn-more-title title-md" style={{ color: 'white' }}>{translations.learnMoreTitle}</div>
             <p className="learn-more-description body-text" style={{color:'white'}}>
-                With expertise in both real estate and insurance, I provide a streamlined experience that puts
-                you at ease — so you don’t need multiple agents, just one trusted advisor who understands your goals.
+          {translations.learnMoreText}
             </p>
-            <button className="learn-more-button button">Learn More</button>
+        <button className="learn-more-button button">{translations.learnMoreButton}</button>
         </div>
         
     </section>

@@ -9,11 +9,14 @@ import NavBar from './components/NavBar/NavBar'
 import Properties from './pages/Properties'
 import PropertyDetails from './pages/PropertyDetails'
 import ScrollToTop from './ScrollToTop'
+import { LanguageProvider } from './hooks/useLanguage'
 
 
 export default function App() {
   return (
     <> 
+      <LanguageProvider>
+
     <NavBar />
       <ScrollToTop />
     <Routes>
@@ -25,6 +28,8 @@ export default function App() {
         <Route path="/properties/:address" element={<PropertyDetails />} />
 
     </Routes>
+      </LanguageProvider>
+
     </>
   )
   
