@@ -2,7 +2,7 @@
 export const API_URL = "http://localhost:3000"
 
 export const PERSONAL_INFO = {
-    email: "kuldipkahlon1@gmail.com",
+    email: "kahlonkuldip1@gmail.com",
     phone: "(416)-605-4058",
     instagram: "https://www.instagram.com/kuldipkahlon1/",
     facebook: "https://www.facebook.com/kuldip.kahlon.1",

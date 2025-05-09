@@ -11,7 +11,7 @@ export default function WorkWithMe() {
         <div className="work-with-me-divider"></div>
         <div className="work-with-me-description bg-text" style={{color:'white'}}>
         Whether you’re searching for the perfect home, preparing to list your property, or making sure your investment is 
-        properly protected, I combine real estate and insurance expertise to give you a complete, stress-free experience.
+          properly protected, I bring real estate expertise to give you a complete, stress-free experience.
         </div>
       </div>
       <div className="work-with-me-button-container">

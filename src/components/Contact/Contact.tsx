@@ -7,6 +7,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import FacebookIcon from '@mui/icons-material/Facebook';
 import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
+import { API_URL } from "../../constants";
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 type FormData = {
@@ -29,6 +30,7 @@ function Sanitizer(
 }
 
 export default function Contact(): JSX.Element {
+  const [errorMessage, setErrorMessage] = useState('');
   const [formData, setFormData] = useState<FormData>({
     firstname: '',
     lastname: '',
@@ -57,6 +59,50 @@ export default function Contact(): JSX.Element {
       ...prev,
       choice: e.target.value
     }));
+  };
+
+  const handleSubmit = (): void => {
+    if (!formData.firstname || !formData.lastname || !formData.email || !formData.phone) {
+      setErrorMessage("Please fill in all required fields.");
+      return;
+    }
+
+    if (!emailValidation(formData.email)) {
+      setErrorMessage("Please enter a valid email address.");
+      return;
+    }
+
+    fetch(API_URL + "/api/send-email", {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then((response) => {
+        if (!response.ok) {
+          setErrorMessage("An error occurred while sending the message. Please try again later.");
+        }
+        return response.json();
+      })
+      .then((data) => {
+        console.log('Success:', data);
+        setErrorMessage(data.message);
+      })
+      .catch((error) => {
+        console.error('Error:', error);
+        setErrorMessage("An error occurred while sending the message. Please try again later.");
+      });
+
+
+
+
+
+  };
+
+  const emailValidation = (email: string): boolean => {
+    const regex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+    return regex.test(email);
   };
 
   return (
@@ -153,8 +199,13 @@ export default function Contact(): JSX.Element {
           </div>
 
           <div className="form-button">
-            <button className="send-message body-text button">Send Message</button>
-          </div>
+              {errorMessage && (
+                <p className="error-message body-text" style={{ color: 'red' }}>{errorMessage}</p>
+              )}
+              <button className="send-message body-text button" onClick={handleSubmit}>
+                Send Message
+              </button>
+            </div>
         </div>
       </div>
       <div className="contact-divider"></div>

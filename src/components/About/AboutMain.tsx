@@ -49,11 +49,11 @@ export default function AboutMain() {
         <p className="about-address-text body-text">London, Ontario</p>
 
         <p className="about-description body-text">
-          Kuldip Kahlon graduated from the University of Toronto with a degree in Business Management. She began her career in the insurance industry, helping individuals and families protect their futures, before transitioning into real estate where she combined her passion for client service with her business expertise.
+          Kuldip Kahlon is a licensed real estate professional with over 5 years of hands-on experience helping clients buy, sell, and invest with confidence. She is also a certified insurance advisor, offering guidance on how to protect what matters most through customized coverage solutions. Kuldip’s unique combination of real estate and insurance expertise allows her to provide well-rounded advice that supports both immediate goals and long-term security.
           {expanded && (
             <>
               {' '}
-              For over a decade, Kuldip has built a trusted reputation offering both real estate and insurance services. Her clients value her honesty, professionalism, and personalized approach. Whether you’re buying your first home or planning for long-term security, Kuldip is committed to guiding you every step of the way.
+              Known for her approachable nature, strong communication skills, and results-driven mindset, Kuldip is dedicated to simplifying complex decisions and delivering personalized service every step of the way. Whether you're entering the market for the first time or preparing for the next phase of life, she is committed to making the process seamless and rewardin
             </>
           )}
         </p>

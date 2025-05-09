@@ -8,10 +8,7 @@ export default function SuccessFormula() {
         <div className="success-formula-title title-md">A Proven Sucess Formula</div>
         <div className="success-formula-divider"></div>
         <p className="success-formula-description body-text">
-          I have dedicated my career to helping individuals and families navigate the world of real estate and insurance. My approach is built on a foundation of industry expertise,
-          honest communication, and a relentless drive for client success. With years of proven results and hundreds of
-          satisfied clients, I’m committed to delivering personalized
-          strategies, expert advice, and outcomes you can trust.
+          My work focuses on more than closing deals or issuing policies. I believe in helping people make decisions that impact their future with clarity and confidence. Whether it’s buying a home, protecting your family’s income, or planning ahead, I’m here to simplify the process and walk alongside you with care and expertise.
         </p>
         <button onClick={() => navigate('/contact')} className="request button2">REQUEST A CONSULTAION →</button>
       </div>
