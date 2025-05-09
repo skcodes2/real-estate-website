@@ -1,16 +1,20 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/scrollbar';
-import 'swiper/css/navigation';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/scrollbar";
+import "swiper/css/navigation";
 
-import { useEffect, useState } from 'react';
-import { PropertyDetails } from '../Properties/PropertyTypes';
-import { getProperties } from '../Properties/PropertiesMain';
-import PropertyItem from '../Properties/PropertyItem';
+import { useEffect, useState } from "react";
+import { PropertyDetails } from "../Properties/PropertyTypes";
+import { getProperties } from "../Properties/PropertiesMain";
+import PropertyItem from "../Properties/PropertyItem";
 
-import { Keyboard } from 'swiper/modules';
+import { Keyboard } from "swiper/modules";
 
-export default function PropertiesViewSlider() {
+interface PropertiesViewSliderProps {
+  onSwiperInit: (swiperInstance: any) => void;
+}
+
+export default function PropertiesViewSlider({ onSwiperInit }: PropertiesViewSliderProps) {
   const [properties, setProperties] = useState<PropertyDetails[]>([]);
   const [loading, setLoading] = useState(true);
 
@@ -36,6 +40,7 @@ export default function PropertiesViewSlider() {
 
   return (
     <Swiper
+      onSwiper={onSwiperInit}
       centeredSlides={false}
       slidesPerGroupSkip={1}
       grabCursor={true}
@@ -52,7 +57,10 @@ export default function PropertiesViewSlider() {
     >
       {properties.map((property) => (
         <SwiperSlide key={property.address}>
-          <PropertyItem imageUrl={property.displayImageUrl} address={property.address} />
+          <PropertyItem
+            imageUrl={property.displayImageUrl}
+            address={property.address}
+          />
         </SwiperSlide>
       ))}
     </Swiper>
