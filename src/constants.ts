@@ -1,5 +1,5 @@
 
-export const API_URL = "http://localhost:3000"
+export const API_URL = "http://10.0.0.83:3000"
 
 export const PERSONAL_INFO = {
     email: "kahlonkuldip1@gmail.com",

@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { PropertyDetails } from "../Properties/PropertyTypes";
 import { getProperties } from "../Properties/PropertiesMain";
 import PropertyItem from "../Properties/PropertyItem";
+import { API_URL } from "../../constants";
 
 import { Keyboard } from "swiper/modules";
 
@@ -58,7 +59,7 @@ export default function PropertiesViewSlider({ onSwiperInit }: PropertiesViewSli
       {properties.map((property) => (
         <SwiperSlide key={property.address}>
           <PropertyItem
-            imageUrl={property.displayImageUrl}
+            imageUrl={API_URL + property.displayImageUrl}
             address={property.address}
           />
         </SwiperSlide>

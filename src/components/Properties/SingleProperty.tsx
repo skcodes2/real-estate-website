@@ -1,6 +1,7 @@
 import "./SingleProperty.css";
 import { PropertyDetails } from "./PropertyTypes";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../../constants";
 
 type Props = {
   property: PropertyDetails;
@@ -25,7 +26,7 @@ export default function SingleProperty({ property }: Props) {
   return (
     <div className="single-property-container">
       <div className="single-property-image-wrapper">
-        <img src={displayImageUrl} className="single-property-image" alt="Main" />
+        <img src={API_URL + displayImageUrl} className="single-property-image" alt="Main" />
         <div className="single-property-overlay">
           <button className="view-button" onClick={handleClick}>
             View Property

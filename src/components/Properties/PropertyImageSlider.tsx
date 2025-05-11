@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { PropertyDetails } from './PropertyTypes';
 import { getProperties } from './PropertiesMain';
+import { API_URL } from '../../constants';
 
 import 'swiper/swiper-bundle.css';
 // FreeMode styles are included in the main Swiper CSS
@@ -59,7 +60,7 @@ export default function PropertyImageSlider({address}: { address: string }) {
         {property.images.map((url, idx) => (
           <SwiperSlide key={`main-${idx}`}>
             <div className="property-image-wrapper">
-            <img src={url} alt={`Property image ${idx + 1}`} />
+              <img src={API_URL + url} alt={`Property image ${idx + 1}`} />
             </div>
             
           </SwiperSlide>
