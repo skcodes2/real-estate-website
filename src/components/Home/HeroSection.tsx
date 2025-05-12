@@ -8,7 +8,7 @@ import WhatsAppIcon from '@mui/icons-material/WhatsApp';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import { useLanguage } from '../../hooks/useLanguage';
-import { homeTranslations } from '../../constants';
+import { homeTranslations, PERSONAL_INFO } from '../../constants';
 export default function HeroSection() {
     const navigate = useNavigate();
     const { language } = useLanguage();
@@ -23,10 +23,10 @@ export default function HeroSection() {
                   <p className="hero-description body-text" style={{ color: 'white' }}>{translations.homeHeroText}</p>
                   <button className="hero-button button" onClick={() => navigate("/contact")}>{translations.heroButton}</button>
                   <div className="social-icons">
-                      <a href="https://www.instagram.com/yourprofile" target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
-                      <a href="https://www.facebook.com/yourprofile" target="_blank" rel="noopener noreferrer"><FacebookIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
-                      <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer"><WhatsAppIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
-                      <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer"><LinkedInIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+                      <a href={PERSONAL_INFO.instagram} target="_blank" rel="noopener noreferrer"><InstagramIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+                      <a href={PERSONAL_INFO.facebook} target="_blank" rel="noopener noreferrer"><FacebookIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+                      <a href={PERSONAL_INFO.whatsapp} target="_blank" rel="noopener noreferrer"><WhatsAppIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
+                      <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer"><LinkedInIcon className="social-icon" fontSize='large' sx={{ color: 'white', '&:hover': { color: 'var(--secondary-color)' } }} /></a>
                   </div>
               </div>
 

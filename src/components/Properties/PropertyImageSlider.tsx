@@ -6,8 +6,6 @@ import { API_URL } from '../../constants';
 
 import 'swiper/swiper-bundle.css';
 // FreeMode styles are included in the main Swiper CSS
-import 'swiper/css/navigation';
-import 'swiper/css/thumbs';
 import "./PropertyDetails.css"
 
 
@@ -48,7 +46,7 @@ export default function PropertyImageSlider({address}: { address: string }) {
         spaceBetween={30}
         centeredSlides={true}
         autoplay={{
-          delay: 244500,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         navigation={true}

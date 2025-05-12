@@ -1,15 +1,14 @@
 
-export const API_URL = "http://10.0.0.83:3000"
+export const API_URL = "http://18.219.178.145:80"
 
 export const PERSONAL_INFO = {
     email: "kahlonkuldip1@gmail.com",
     phone: "(416)-605-4058",
-    instagram: "https://www.instagram.com/kuldipkahlon1/",
-    facebook: "https://www.facebook.com/kuldip.kahlon.1",
-    linkedin: "https://www.linkedin.com/in/kuldip-kahlon-1a0b4b1a2/",
-    whatsapp: "https://wa.me/14146054058",
+    instagram: "https://www.instagram.com/kuldipkahlonrealtor/?igsh=MXV4d240ZWl4NW53Zg%3D%3D",
+    facebook: "https://www.facebook.com/kuldip.kahlon.9",
+    linkedin: "https://www.linkedin.com/in/kuldip-kahlon-97a17427b/",
+    whatsapp: "https://wa.me/41646054058",
 }
-
 
 export const homeTranslations = {
     EN: {
@@ -86,7 +85,7 @@ export const footerTranslations = {
         footerPhone: "ਫੋਨ ਨੰਬਰ",
         footerEmail: "ਈਮੇਲ",
         footerProperties: "ਜਾਇਦਾਦਾਂ",
-        footerContact: "ਸੰਪਰਕ ਕਰੋ",
+        footerContact: "ਸੰਪਰਕ",
         footerGuide: "ਗਾਈਡ",
         footerAbout: "ਬਾਰੇ",
         footerHome: "ਘਰ",
@@ -216,7 +215,7 @@ export const navTranslations = {
     },
     PA: {
         name: "ਕੁਲਦੀਪ ਕਾਹਲੋਂ",
-        navHome: "ਮੁੱਖ ਪੰਨਾ",
+        navHome: "ਘਰ",
         navAbout: "ਬਾਰੇ",
         navGuide: "ਗਾਈਡ",
         navProperties: "ਜਾਇਦਾਦਾਂ",

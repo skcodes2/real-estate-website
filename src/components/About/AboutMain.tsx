@@ -24,16 +24,16 @@ export default function AboutMain() {
           <img src={pic} alt="Kuldip Kahlon" className="about-image" />
         </div>
         <div className="social-icons" style={{ justifyContent: 'center' }}>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={PERSONAL_INFO.instagram} target="_blank" rel="noopener noreferrer">
             <InstagramIcon className="social-icon" fontSize="large" sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={PERSONAL_INFO.facebook} target="_blank" rel="noopener noreferrer">
             <FacebookIcon className="social-icon" fontSize="large" sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={PERSONAL_INFO.whatsapp} target="_blank" rel="noopener noreferrer">
             <WhatsAppIcon className="social-icon" fontSize="large" sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} />
           </a>
-          <a href="#" target="_blank" rel="noopener noreferrer">
+          <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer">
             <LinkedInIcon className="social-icon" fontSize="large" sx={{ color: 'var(--text-color)', '&:hover': { color: 'var(--secondary-color)' } }} />
           </a>
         </div>

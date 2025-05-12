@@ -8,7 +8,7 @@
 
 .mySwiper2 img{
     display: block;
-    max-width: 80%;
+    max-width: 100%;
     min-height: 90dvh;
     object-fit: cover;
 }
@@ -17,3 +17,7 @@
    height: 100%;
 }
 
+.mySwiper2 .property-image-wrapper{
+    height: 100dvh;
+    min-width: 700px;
+}
