@@ -23,12 +23,12 @@ export default function PropertySummary() {
               <div className="sold body-text" style={{ fontSize: "1.5rem" }}>{property.sold}</div>
               <p className="summary-address body-text" style={{ fontSize: "1.5rem" }}>{property.address}</p>
               <p className="summary-price body-text" style={{ fontSize: "1.5rem" }}>
-                  From {property.price.toLocaleString('en-US', {
+                  From {Number(property.price).toLocaleString('en-US', {
                       style: 'currency',
                       currency: 'USD',
                       minimumFractionDigits: 0,
                       maximumFractionDigits: 0
-                  })}
+                  })}{property.sold === "On Lease" ? "/month" : ""}
               </p>
               <div className="summary-divider"></div>
               <p className="summary-description-title title-sm">Property Description</p>

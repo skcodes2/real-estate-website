@@ -14,7 +14,8 @@ export default function SingleProperty({ property }: Props) {
     price,
     bedrooms,
     bathrooms,
-    displayImageUrl
+    displayImageUrl,
+    sold
   } = property;
 
   const navigate = useNavigate();
@@ -38,7 +39,12 @@ export default function SingleProperty({ property }: Props) {
       <p className="property-text body-text">
         {bedrooms} BD | {bathrooms}BA | {sqft} SQ.FT
       </p>
-      <p className="property-text body-text">From ${price}</p>
+      <p className="property-text body-text">From {Number(price).toLocaleString('en-US', {
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
+      })}{sold === "On Lease" ? "/month" : ""}</p>
     </div>
   );
 }
