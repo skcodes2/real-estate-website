@@ -29,7 +29,7 @@
   .single-property-image {
     display: block;
     width: 100%;
-    height: auto;
+    min-height: 70dvh;
     transition: filter 0.3s ease;
   }
   
@@ -82,7 +82,8 @@
     }
   
     .single-property-image {
-      max-width: 40%;
+      max-width: 65%;
+      min-height: 30dvh;
     }
   
     .single-property-image-wrapper {
@@ -91,6 +92,10 @@
   
     .property-text {
       text-align: left;
+    }
+
+    .properties-main-container{
+      justify-items: center;
     }
   }
   

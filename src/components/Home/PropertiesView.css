@@ -83,6 +83,7 @@
   
   .mySwiper .swiper-slide img {
     max-width: 70%;
+    min-height: 50dvh;
   }
   .properties-view-button-container{
     display: flex;
