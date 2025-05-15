@@ -90,3 +90,27 @@
   .body-padding{
     padding: var(--body-padding);
   }
+
+@media (max-width: 600px) {
+    .bg-image{
+        background-size: 200% 100%;
+    }
+}
+
+@media (max-width: 450px) {
+    .bg-image{
+        background-size: 300% 100%;
+    }
+}
+
+@media (max-width: 350px) {
+    .bg-image{
+        background-size: 400% 100%;
+    }
+}
+
+@media (max-width: 300px) {
+    .bg-image{
+        background-size: 500% 100%;
+    }
+}
