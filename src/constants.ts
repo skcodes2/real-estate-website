@@ -1,5 +1,5 @@
 
-export const API_URL = "http://18.219.178.145:80"
+export const API_URL = "https://kahlonkuldip.homes";
 
 export const PERSONAL_INFO = {
     email: "kahlonkuldip1@gmail.com",
