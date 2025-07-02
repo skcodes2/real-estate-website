@@ -21,6 +21,7 @@
     gap: 1.5rem;
     height: 100%;
     width: 50%;
+    margin-top:3.5rem;
 }
 .about-image-container{
     display: flex;

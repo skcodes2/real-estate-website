@@ -20,7 +20,7 @@ export default function FooterEnd() {
                     
                 </div>
         <p className="book-call body-text" onClick={() => navigate("/contact")}>{translations.footerBooking}</p>
-        <p className="footer-copyright body-text"> {translations.footerCopyright}</p>
+        <p className="footer-copyright body-text" style={{ marginBottom: '1rem' }}> {translations.footerCopyright}</p>
             </div>
     </div>
   )

@@ -26,7 +26,6 @@ export default function Footer() {
             {translations.footerSubtitle}
                 </p>
 
-
                 <div className="footer-social-icons-container">
             <p className="footer-social-icons-title title-sm">{translations.footerSocial}</p>  
                       <div className="footer-social-icons">
@@ -41,7 +40,7 @@ export default function Footer() {
         <div className="footer-contact-details">
            <ContactFlex 
            vGap={7}
-            hGap={20}
+            hGap={9}
            />
         </div>
       </div>
